@@ -7,6 +7,8 @@ Info about the sequence can be found at the following:
 [WIKIPEDIA](https://en.wikipedia.org/wiki/Van_Eck%27s_sequence)  
 [YOUTUBE (Numberphile)](https://www.youtube.com/watch?v=etMJxB-igrc)  
 
+The Program here has two versions, one which runs on Python2 and one which will run on Python3 (still in the works)
+
 
 ## USAGE:
 ```
