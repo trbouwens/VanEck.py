@@ -1,4 +1,4 @@
-# This is the Python2 Version of the VanEck program.
+# This is the Python3 version of VanEck.py
 
 import sys
 sequence = [0]
@@ -12,13 +12,13 @@ arg_seen = 0
 arg_info = 0
 
 def printHelp():
-    print "\n======= ARGUMENT HELP ======="
-    print "filename.py -l -s -h -n <x>"
-    print "   -l   : prints the VanEck Sequence generated"
-    print "   -s   : prints integers seen at any point in the sequence"
-    print "   -i   : prints info about the sequence at the end"
-    print "   -h   : prints this help message"
-    print " -n <x> : used to set program to gen x of places to generate in the sequence (Default 10)"
+    print("\n======= ARGUMENT HELP =======")
+    print("filename.py -l -s -h -n <x>")
+    print("   -l   : prints the VanEck Sequence generated")
+    print("   -s   : prints integers seen at any point in the sequence")
+    print("   -i   : prints info about the sequence at the end")
+    print("   -h   : prints this help message")
+    print(" -n <x> : used to set program to gen x of places to generate in the sequence (Default 10)")
 
 if (len(sys.argv) == 1):
     printHelp()
@@ -37,7 +37,7 @@ for arg in sys.argv:
         if (int(sys.argv[ind]) > 0):
             max = int(sys.argv[ind])
         else:
-            print "Input is less than or equal to 0; Using default"
+            print("Input is less than or equal to 0; Using default")
             max = 10
 
 
@@ -71,20 +71,18 @@ while id < max:
     id += 1
 
 if arg_list == 1:
-    print "\n======= SEQUENCE ======="
+    print("\n======= SEQUENCE =======")
     for num in sequence:
-        print "%i," %num,
-    else:
-        print
+        print(num, end=", ")
 
 if arg_seen == 1:
-    print "\n===== USED NUMBERS ====="
+    print("\n===== USED NUMBERS =====")
     seen.sort()
     for num in seen:
-        print "%i," %num,
+        print(num, end=", ")
     else:
         print
 
 if arg_info == 1:
-    print "\n========= INFO ========="
-    print "Sequence was %i values long, having %i unique integers in the sequence." % (max,len(seen))
+    print("\n========= INFO =========")
+    print("Sequence was {} values long, having {} unique integers in the sequence.".format(max,len(seen)))
